@@ -11,13 +11,15 @@ class HomeController extends Controller
      * @return Response
      */
     public function showForm() {
-        return view('home.show_form');
+        $title = "Show form";
+        return view('home.show_form', compact('title'));
     }
 
     /**
      * @return Response
      */
     public function handleForm() {
-        return view('home.show_form');
+        $title = "Results | Show form";
+        return view('home.show_form', compact('title'));
     }
 }
