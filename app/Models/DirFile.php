@@ -11,6 +11,12 @@ class DirFile extends Model
     use HasFactory;
 
     /**
+     * Fillable data
+     * @var Array
+     */
+    private array $fillable = ['name'];
+
+    /**
      * Get directory.
      * @return Builder
      */
