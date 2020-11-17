@@ -12,6 +12,14 @@ class Dir extends Model
     use HasFactory;
 
     /**
+     * Get parent directory.
+     * @return Builder
+     */
+    public function parent() {
+        return $this->belongsTo(self::class);
+    }
+
+    /**
      * Get directory files.
      * @return Builder
      */
