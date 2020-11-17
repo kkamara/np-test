@@ -4,8 +4,25 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Dir;
 
 class DirFile extends Model
 {
     use HasFactory;
+
+    /**
+     * Get directory files.
+     * @return Builder
+     */
+    public function dir() {
+        return $this->belongsTo(Dir::class);
+    }
+
+    /**
+     * Query scope gets directory belonging to.
+     * @return Builder
+     */
+    public function scopeGetDir($query) {
+        return $query->belongsTo('dir');
+    }
 }
