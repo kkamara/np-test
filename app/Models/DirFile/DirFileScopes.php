@@ -14,4 +14,16 @@ class DirFileScopes extends Model
     public function scopeGetDir($query) {
         return $query->belongsTo(Dir::class);
     }
+
+    /**
+     * Query scope considers input string.
+     * @return Builder
+     */
+    public function scopeSearch($query, string $searchTerm) {
+        return $query->where(
+            'name', 
+            'LIKE',
+            '%'.$searchTerm.'%'
+        );
+    }
 }
