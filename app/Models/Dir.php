@@ -12,6 +12,13 @@ class Dir extends Model
     use HasFactory;
 
     /**
+     * Fillable data
+     * @var Array
+     */
+    private array $fillable = ['name', 'parent_id'];
+
+
+    /**
      * Get parent directory.
      * @return Builder
      */
