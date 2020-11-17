@@ -15,6 +15,10 @@ class CreateDirFilesTable extends Migration
     {
         Schema::create('dir_files', function (Blueprint $table) {
             $table->id();
+            $table->foreign('dir_id')
+                ->references('id')
+                ->on('dirs');
+            $table->string('name');
             $table->timestamps();
         });
     }
