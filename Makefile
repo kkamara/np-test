@@ -3,11 +3,12 @@ docker-setup:
 	docker-compose up -d # get services running
 
 backend-install:
-	@docker exec jsp-app composer install
+	@docker exec npt-app composer install
 
 backend-setup:
 	make backend-install
-	@docker exec jsp-app php artisan migrate
+	@docker exec npt-app php artisan migrate
+	@docker exec npt-app php artisan key:generate
 
 frontend-install:
 	@docker exec npt-app npm install
