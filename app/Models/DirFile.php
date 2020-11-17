@@ -11,7 +11,7 @@ class DirFile extends Model
     use HasFactory;
 
     /**
-     * Get directory files.
+     * Get directory.
      * @return Builder
      */
     public function dir() {
