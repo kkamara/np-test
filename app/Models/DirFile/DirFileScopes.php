@@ -2,10 +2,9 @@
 
 namespace App\Models\DirFile;
 
-use Illuminate\Database\Eloquent\Model;
 use App\Models\Dir\Dir;
 
-class DirFileScopes extends Model
+trait DirFileScopes
 {
     /**
      * Query scope gets directory belonging to.

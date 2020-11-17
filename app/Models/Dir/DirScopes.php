@@ -3,10 +3,9 @@
 namespace App\Models\Dir;
 
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
 use App\Models\DirFile\DirFile;
 
-class DirScopes extends Model
+trait DirScopes
 {
     /**
      * Query scope gets directory files.

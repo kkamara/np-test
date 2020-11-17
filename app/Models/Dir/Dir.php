@@ -17,6 +17,12 @@ class Dir extends Model
      * Fillable data
      * @var Array
      */
-    private array $fillable = ['name', 'parent_id'];
+    protected $fillable = ['name', 'parent_id'];
 
+    /**
+     * @return String
+     */
+    public function getFullPathAttribute() {
+        return $this->name;
+    }
 }

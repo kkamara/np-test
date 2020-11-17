@@ -15,5 +15,12 @@ class DirFile extends Model
      * Fillable data
      * @var Array
      */
-    private array $fillable = ['name'];
+    protected $fillable = ['name'];
+
+    /**
+     * @return String
+     */
+    public function getFullPathAttribute() {
+        return $this->name;
+    }
 }
