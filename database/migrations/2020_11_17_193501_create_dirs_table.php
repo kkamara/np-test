@@ -18,7 +18,8 @@ class CreateDirsTable extends Migration
             $table->string('name');
             $table->foreign('parent_id')
                 ->references('id')
-                ->on('dirs');
+                ->on('dirs')
+                ->default(null);
             $table->timestamps();
         });
     }
