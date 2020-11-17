@@ -24,6 +24,6 @@ class Dir extends Model
      * @return Builder
      */
     public function scopeGetFiles($query) {
-        return $this->has('dir_files');
+        return $query->has('dir_files');
     }
 }
