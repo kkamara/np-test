@@ -16,10 +16,15 @@ class HomeController extends Controller
     }
 
     /**
+     * @param Request $input
      * @return Response
      */
-    public function handleForm() {
+    public function handleForm(Request $input) {
         $title = "Results | Show form";
-        return view('home.show_form', compact('title'));
+        $results = [];
+        return view(
+            'home.handle_form', 
+            compact('title', 'results')
+        );
     }
 }
