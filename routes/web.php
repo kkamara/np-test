@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['namespace' => 'App\Http\Controllers'], function() {
-    Route::get('/', 'HomeController@showForm');
-    Route::post('/', 'HomeController@handleForm');
+    Route::get('/', 'HomeController@showForm')->name('showForm');
+    Route::post('/', 'HomeController@handleForm')->name('handleForm');
 });
