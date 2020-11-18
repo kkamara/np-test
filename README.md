@@ -6,15 +6,13 @@ Make sure you have [Docker Compose](https://docs.docker.com/compose/install/) in
 ## Using Linux?
 
 ```
-make start # build & run your script
-make stop  # stop your docker container
+make dev
 ```
 
 ## Using Windows?
 
 ```
-.\ps\run.ps1 start # build & run your script
-.\ps\run.ps1 stop  # stop your docker container
+.\ps\run.ps1 dev
 ```
 
 ## License
