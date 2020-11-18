@@ -5,3 +5,9 @@
 .results-card {
     margin-top: 10px;
 }
+
+.full-path {
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: inside;
+}

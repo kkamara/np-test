@@ -16,7 +16,7 @@
     <div class="card results-card">
         <div class="card-body">
             @forelse($results as $result)
-                <p>{{ $result->full_path }}</p>
+                <p class='full-path'>{{ $result->full_path }}</p>
             @empty
                 <p>No results found.</p>
             @endforelse
