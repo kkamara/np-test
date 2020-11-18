@@ -1,11 +1,11 @@
 <?php
 
-namespace Database\Factories;
+namespace Database\Factories\Dir;
 
 use App\Models\Dir\Dir;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class dirFactory extends Factory
+class DirFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.

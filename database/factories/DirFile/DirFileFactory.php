@@ -1,12 +1,12 @@
 <?php
 
-namespace Database\Factories\DirFile;
+namespace Database\Factories\DirFile\DirFile;
 
 use App\Models\DirFile\Dir;
 use App\Models\DirFile\DirFile;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class dirFileFactory extends Factory
+class DirFileFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
