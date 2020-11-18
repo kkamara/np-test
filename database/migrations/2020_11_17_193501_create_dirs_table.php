@@ -16,11 +16,10 @@ class CreateDirsTable extends Migration
         Schema::create('dirs', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreign('parent_id')
-                ->references('id')
-                ->on('dirs')
-                ->default(null);
+            $table->unsignedBigInteger('parent_id')->nullable(true);
             $table->timestamps();
+
+            $table->foreign('parent_id')->references('id')->on('dirs');
         });
     }
 
