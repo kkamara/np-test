@@ -23,6 +23,15 @@ class Dir extends Model
      * @return String
      */
     public function getFullPathAttribute() {
-        return $this->name;
+        $result = array($this->attributes['name']);
+
+        $parent = $this->parent()->first();
+        
+        while(null !== $parent) {
+            array_push($result, $parent->name);
+            $parent = $parent->parent()->first();
+        }
+
+        return implode('/', $result);
     }
 }

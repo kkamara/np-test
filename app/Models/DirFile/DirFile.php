@@ -21,6 +21,10 @@ class DirFile extends Model
      * @return String
      */
     public function getFullPathAttribute() {
-        return $this->name;
+        return sprintf(
+            '%s/%s',
+            $this->dir()->first()->full_path,
+            $this->name
+        );
     }
 }
